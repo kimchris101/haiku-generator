@@ -8,6 +8,30 @@
 </head>
 <body>
     <h1>AI Haiku Generator</h1>
+       <p class="subtitle">5-7-5 syllables of instant AI wisdom</p>
+     <main>
+            <div class="input-group">
+                <label for="topic-input">What should the poem be about?</label>
+                <input 
+                    type="text" 
+                    id="topic-input" 
+                    placeholder="e.g., autumn rain, morning coffee, coding late..."
+                    maxlength="50"
+                >
+                <button id="generate-btn">Generate Haiku</button>
+            </div>
+
+            <!-- The Output Box (Hidden or empty by default, populated via JavaScript) -->
+            <div id="haiku-output" class="haiku-card invisible">
+                <div class="haiku-poem">
+                    <p class="line">An empty canvas,</p>
+                    <p class="line">Waiting for your chosen words,</p>
+                    <p class="line">Poetry appears.</p>
+                </div>
+                <span class="haiku-topic">Topic: AI Art</span>
+            </div>
+        </main>
+    </div>
     <script src="src/index.js"></script>
     <footer>
         Open source project by <a href="https://github.com/kimchris101/haiku-generator" target="_blank">kimchris</a>

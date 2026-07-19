@@ -1,8 +1,140 @@
-body {
-    background-color: skyblue;
-    text-align: center;
-    font-family: Arial, sans-serif;
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+body {
+    text-align: center;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333333;
+    padding: 20px;
 
+}
+
+/* Container */
+.generator-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+}
+
+/* Typography */
+header h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 0.95rem;
+    color: #666666;
+    margin-bottom: 32px;
+}
+
+/* Form Inputs */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.input-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4a4a4a;
+    text-align: left;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 14px 16px;
+    font-size: 1rem;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+input[type="text"]:focus {
+    border-color: #4a90e2;
+}
+
+button {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+button:hover {
+    background-color: #333333;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Haiku Output Card */
+.haiku-card {
+    background-color: #f9f9fb;
+    border-left: 4px solid #1a1a1a;
+    padding: 24px;
+    border-radius: 0 8px 8px 0;
+    margin-top: 20px;
+    animation: fadeIn 0.4s ease forwards;
+}
+
+.haiku-poem {
+    font-family: "Georgia", Georgia, serif;
+    font-style: italic;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: #2c3e50;
+    margin-bottom: 16px;
+}
+
+.haiku-topic {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #9b9b9b;
+    font-weight: bold;
+}
+
+/* Helper Class for JS handling */
+.invisible {
+    display: none;
+}
+
+/* Entry Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
